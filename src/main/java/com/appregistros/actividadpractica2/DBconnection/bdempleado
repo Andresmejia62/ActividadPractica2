@@ -1,0 +1,23 @@
+create table empleado(
+id_empleado serial primary key,
+codigo varchar(10) not null unique,
+nombre varchar(100) not null,
+correo varchar(100) not null,
+cargo varchar(100) not null,
+salario numeric(10,2) not null,
+fecha_registro timestamp not null default current_date,
+activo boolean not null default true,
+
+constraint chk_salario check (salario > 0)
+)
+
+insert into empleado (codigo, nombre, correo, cargo, salario) values ('004', 'Ana Martínez', 'ana.martinez@empresa.com.ni', 'Recursos Humanos', 17500.00);
+insert into empleado (codigo, nombre, correo, cargo, salario) values ('005', 'Luis Hernández', 'luis.hernandez@empresa.com.ni', 'Analista de Datos', 21000.00);
+insert into empleado (codigo, nombre, correo, cargo, salario) values ('006', 'Sofía Ramírez', 'sofia.ramirez@empresa.com.ni', 'Diseñadora Gráfica', 16000.00);
+insert into empleado (codigo, nombre, correo, cargo, salario) values ('007', 'Pedro Castillo', 'pedro.castillo@empresa.com.ni', 'Administrador de Redes', 23500.00);
+insert into empleado (codigo, nombre, correo, cargo, salario) values ('008', 'Daniela Ortiz', 'daniela.ortiz@empresa.com.ni', 'Asistente Administrativa', 12500.00);
+insert into empleado (codigo, nombre, correo, cargo, salario) values ('009', 'José Rivas', 'jose.rivas@empresa.com.ni', 'Soporte Técnico', 14000.00);
+insert into empleado (codigo, nombre, correo, cargo, salario) values ('010', 'Karla Mejía', 'karla.mejia@empresa.com.ni', 'Jefa de Mercadeo', 24000.00);
+insert into empleado (codigo, nombre, correo, cargo, salario) values ('011', 'Roberto Salinas', 'roberto.salinas@empresa.com.ni', 'Auditor Interno', 20000.00);
+insert into empleado (codigo, nombre, correo, cargo, salario) values ('012', 'Gabriela Torres', 'gabriela.torres@empresa.com.ni', 'Ejecutiva de Ventas', 15500.00);
+insert into empleado (codigo, nombre, correo, cargo, salario) values ('013', 'Miguel Aguilar', 'miguel.aguilar@empresa.com.ni', 'Administrador de Base de Datos', 26000.00);
